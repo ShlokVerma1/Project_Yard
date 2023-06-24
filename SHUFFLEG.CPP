@@ -73,14 +73,7 @@ void intro()
  setcolor(CYAN);
  settextstyle(2,0,7);
  outtextxy(10,80,"");
- outtextxy(130,170,"PRATIBHA PARASHAR(2102160100076)");
- outtextxy(130,200,"MANSI KUMARI(2102160100055)");
- outtextxy(130,230,"MANSI JAISWAL(2102160100054)");
- outtextxy(130,260,"KOMAL KUMARI(2102160100046)");
- setcolor(RED);
- settextstyle(6,0,4);
- outtextxy(270,310,"CSE 2A");
- outtextxy(125,340,"Computer Science Engineering");
+ outtextxy(130,170,"SHLOK VERMA");
  getch();
 }
 
