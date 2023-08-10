@@ -28,15 +28,15 @@ class UserManager{
         void RegiserUser()
         {
             string username,password;
-            cout<< "Enter the User Name";
+            cout<< "Enter the User Name: ";
             cin>>username;
-            cout<<"Enter Password";
+            cout<<"Enter Password: ";
             cin>>password;
 
             User newUser(username,password);
             users.push_back(newUser);
 
-            cout<<"\t\t User Register Successfully "<<endl;
+            cout<<"   User Register Successfully  "<<endl;
         }
         bool loginUser(string name, string pass)
         {
@@ -44,19 +44,19 @@ class UserManager{
             {
                 if (users[i].getUsername() == name && users[i].getPassword() == pass)
                 {
-                    cout<<"\t\t Login Sucessfull "<<endl;
+                    cout<<"   Login Sucessfull "<<endl;
                     return true;
                 } 
             }
-            cout<<"\t\t Invalid UserName or Password "<<endl;
+            cout<<"  Invalid UserName or Password "<<endl;
             return false;
         }
         void ShowUser()
         {
-            cout<<"\t\t  User List : "<<endl;
+            cout<<"    User List : "<<endl;
             for (int i=0; i<users.size(); i++)
             {
-                cout<<"\t "<<users[i].getUsername()<<endl;
+                cout<<"  "<<users[i].getUsername()<<endl;
             }
         }
         void SearchUser(string username)
@@ -65,7 +65,7 @@ class UserManager{
             {
                if(users[i].getUsername() == username)
                {
-                cout<<"\t User Found. "<<endl;
+                cout<<"  User Found. "<<endl;
                }
             }
         }
@@ -76,7 +76,7 @@ class UserManager{
                  if(users[i].getUsername() == username)
                 {
                     users.erase(users.begin() +i);
-                    cout<<"\t\t User Removed Sucessfully.  "<<endl;
+                    cout<<"   User Removed Sucessfully.  "<<endl;
                 }
             }
             
@@ -87,16 +87,16 @@ class UserManager{
     UserManager usermanage;
 
     int op;
-    char choise;
+    char Select;
     do{
     system("cls");
-    cout<<"\n\n\t\t1. Register User "<<endl;
-    cout<<"\t\t2. Login "<<endl;
-    cout<<"\t\t3. Show User List"<<endl;
-    cout<<"\t\t4. Search User"<<endl;
-    cout<<"\t\t5. Delete User"<<endl;
-    cout<<"\t\t6. exit"<<endl;
-    cout<<"\t\t Enter Your Choice : ";
+    cout<<"\n\n  1. Register User "<<endl;
+    cout<<"  2. Login "<<endl;
+    cout<<"  3. Show User List"<<endl;
+    cout<<"  4. Search User"<<endl;
+    cout<<"  5. Delete User"<<endl;
+    cout<<"  6. exit"<<endl;
+    cout<<"   Enter Your Selection : ";
     cin>>op;
     switch(op)
     {
@@ -109,9 +109,9 @@ class UserManager{
         case 2:
         {
             string username,password;
-            cout<<"\t Enter User Name: ";
+            cout<<"  Enter User Name: ";
             cin>>username;
-            cout<<"\t Enter PAssword: ";
+            cout<<"  Enter PAssword: ";
             cin>>password;
             usermanage.loginUser(username,password);
             break;
@@ -124,7 +124,7 @@ class UserManager{
         case 4:
         {
             string username;
-            cout<<"\t Enter USer Name: ";
+            cout<<"  Enter User Name: ";
             cin>>username;
             usermanage.SearchUser(username);
             break;
@@ -132,7 +132,7 @@ class UserManager{
         case 5:
         {
             string username;
-           cout<<"\t Enter USer Name: ";
+           cout<<"  Enter USer Name: ";
            cin>>username;
            usermanage.deleteUser(username);
            break;
@@ -143,9 +143,9 @@ class UserManager{
         }
        
     }
-    cout<<"\t Do You Want to Continue [Yes/No]?";
-    cin>>choise;
+    cout<<"  Do You Want to Continue [Yes/No]?";
+    cin>>Select;
     } 
-    while(choise =='y'|| choise == 'n');
+    while(Select =='y'|| Select == 'n');
 
 }
