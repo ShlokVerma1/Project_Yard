@@ -24,7 +24,7 @@ int main()
     cout<<"Enter Captcha: "<<endl;
     cin>> usr_captcha;
     if(CheckCaptcha(captcha, usr_captcha))
-        cout<<"Captcha Matched hogya"<<endl;
+        cout<<"Captcha Matched"<<endl;
     else
         cout<<"Captcha Not Matched"<<endl;
 
